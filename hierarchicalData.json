@@ -1,4 +1,4 @@
-[
+processJSONPResponse([
   {
     "employeeId": 100,
     "employeeName": "Kathryn Powers",
@@ -34407,4 +34407,4 @@
       }
     ]
   }
-]
+])
