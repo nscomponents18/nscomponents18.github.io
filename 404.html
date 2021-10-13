@@ -7,10 +7,12 @@
   <script>
     var route = (window.location.pathname.match(/NSComponent(.*$)/) || [])[1];
   	var str = "/NSComponent";
+	console.log(route);
   	if(route)
   	{
   		str += "/#!" + route;
   	}
-    window.location.href = str;
+	console.log(str);
+    //window.location.href = str;
   </script>
 </html>
