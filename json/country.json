@@ -1,0 +1,275 @@
+{
+    "containerClass": "needs-validation",
+    "isLabelControlsHorizontal": true,
+    "columns": [
+        {
+            "csscol": 12,
+            "columns": [
+                {
+                    "csscolp": 20,
+                    "rows": [
+                        {
+                            "csscol": 12,
+                            "type": "label",
+                            "label": "Travel Date"
+                        },
+                        {
+                            "csscol": 2,
+                            "type": "label",
+                            "label": "From"
+                        },
+                        {
+                            "csscol": 4,
+                            "type": "datepicker",
+                            "key": "travelDateFrom"
+                        },
+                        {
+                            "csscol": 1,
+                            "type": "label",
+                            "label": "To"
+                        },
+                        {
+                            "csscol": 4,
+                            "type": "datepicker",
+                            "key": "travelDateTo"
+                        }
+                    ]
+                },
+                {
+                    "csscolp": 20,
+                    "key": "territoryParent",
+                    "rows": [
+                        {
+                            "csscol": 12,
+                            "type": "autocomplete",
+                            "key": "territory",
+                            "label": "Territory",
+                            "labelclass": "pt-0",
+                            "controlProps": "###territorySetting###"
+                        }
+                    ]
+                },
+                {
+                    "csscolp": 20,
+                    "rows": [
+                        {
+                            "csscol": 12,
+                            "type": "multiselect",
+                            "key": "visitReasons",
+                            "label": "Reason for the visit to ###countryName###",
+                            "labelclass": "pt-0",
+                            "controlProps": "###visitReasonsSetting###",
+                            "refRequired": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "csscol": 12,
+            "containerclass": "section-with-divider",
+            "type": "header",
+            "label": "Questions",
+            "className": "sub-header"
+        },
+        {
+            "csscol": 6,
+            "columns": [
+                {
+                    "csscol": 12,
+                    "cssmb": 3,
+                    "rows": [
+                        {
+                            "csscol": 8,
+                            "type": "label",
+                            "label": "Are there specific counterparty meetings planned while in ###countryName###?"
+                        },
+                        {
+                            "csscol": 4,
+                            "type": "radio",
+                            "key": "hasCounterPartyMeeting",
+                            "name": "hasCounterPartyMeeting",
+                            "valueField": "key",
+                            "options": [
+                                {
+                                    "key": "true",
+                                    "label": "Yes",
+                                    "id": "hasCounterPartyMeeting_yes"
+                                },
+                                {
+                                    "key": "false",
+                                    "label": "No",
+                                    "id": "hasCounterPartyMeeting_no"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "csscol": 12,
+                    "cssmb": 3,
+                    "hide": "hasCounterPartyMeeting !== 'false'",
+                    "rows": [
+                        {
+                            "csscol": 12,
+                            "type": "label",
+                            "label": "Select which is applicable to your travel?"
+                        },
+                        {
+                            "csscol": 12,
+                            "type": "radio",
+                            "key": "hasMeetcounterparties",
+                            "name": "hasMeetcounterparties",
+                            "valueField": "key",
+                            "options": [
+                                {
+                                    "key": "true",
+                                    "label": "Do you still expect to meet Counterparties but without specific plans(for example, at a conference?)",
+                                    "id": "hasMeetcounterparties_yes"
+                                },
+                                {
+                                    "key": "false",
+                                    "label": "There are no plans to meet with any counterparties while in ###countryName###",
+                                    "id": "hasMeetcounterparties_no"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "csscol": 12,
+                    "cssmb": 3,
+                    "rows": [
+                        {
+                            "csscol": 8,
+                            "type": "label",
+                            "label": "Will you be providing entertainment to a Public Entity?"
+                        },
+                        {
+                            "csscol": 4,
+                            "type": "radio",
+                            "key": "hasEntertainmentForPublicEntity",
+                            "name": "hasEntertainmentForPublicEntity",
+                            "valueField": "key",
+                            "options": [
+                                {
+                                    "key": "true",
+                                    "label": "Yes",
+                                    "id": "hasEntertainmentForPublicEntity_yes"
+                                },
+                                {
+                                    "key": "false",
+                                    "label": "No",
+                                    "id": "hasEntertainmentForPublicEntity_no"
+                                }
+                            ]
+                        },
+                        {
+                            "csscol": 12,
+                            "type": "label",
+                            "hide": "isUndefinedOrNull(hasEntertainmentForPublicEntity) || Boolean(hasEntertainmentForPublicEntity) !== true",
+                            "label": "Please fill Entertainment of Public Official Approval Form <i className=\"fa fa-pencil-square-o\" aria-hidden=\"true\" style={{paddingLeft: \"5px\"}}></i>",
+                            "className": "sub-message",
+                            "controlProps": "###entertainmentForPublicEntityClick###"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "csscol": 6,
+            "columns": [
+                {
+                    "csscol": 12,
+                    "cssmb": 3,
+                    "rows": [
+                        {
+                            "csscol": 8,
+                            "type": "label",
+                            "label": "Do you plan to visit the local Nomura office in ###countryName###?"
+                        },
+                        {
+                            "csscol": 4,
+                            "type": "radio",
+                            "key": "hasVisitToNomuraOffice",
+                            "name": "hasVisitToNomuraOffice",
+                            "valueField": "key",
+                            "options": [
+                                {
+                                    "key": "true",
+                                    "label": "Yes",
+                                    "id": "hasVisitToNomuraOffice_yes"
+                                },
+                                {
+                                    "key": "false",
+                                    "label": "No",
+                                    "id": "hasVisitToNomuraOffice_no"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "csscol": 12,
+                    "cssmb": 3,
+                    "rows": [
+                        {
+                            "csscol": 8,
+                            "type": "label",
+                            "label": "Are you looking to have communications with the public?"
+                        },
+                        {
+                            "csscol": 4,
+                            "type": "radio",
+                            "key": "hasCommunicationWithPublic",
+                            "name": "hasCommunicationWithPublic",
+                            "valueField": "key",
+                            "options": [
+                                {
+                                    "key": "true",
+                                    "label": "Yes",
+                                    "id": "hasCommunicationWithPublic_yes"
+                                },
+                                {
+                                    "key": "false",
+                                    "label": "No",
+                                    "id": "hasCommunicationWithPublic_no"
+                                }
+                            ]
+                        },
+                        {
+                            "csscol": 12,
+                            "type": "label",
+                            "hide": "isUndefinedOrNull(hasCommunicationWithPublic) || Boolean(hasCommunicationWithPublic) !== true",
+                            "label": "###hasCommunicationWithPublicLinkLabel###",
+                            "className": "sub-message"
+                        },
+                        {
+                            "csscol": 12,
+                            "type": "text",
+                            "key": "cwpRequestID",
+                            "className": "inline-with-space",
+                            "hide": "isUndefinedOrNull(hasCommunicationWithPublic) || Boolean(hasCommunicationWithPublic) !== true",
+                            "controlProps": "{style: {width: '170px'}}",
+                            "placeholder": "CWP Request ID"
+                        }
+                    ]
+                },
+                {
+                    "csscol": 12,
+                    "cssmb": 3,
+                    "rows": [
+                        {
+                            "csscol": 8,
+                            "type": "checkbox",
+                            "key": "willNotTransactOverseas",
+                            "name": "willNotTransactOverseas",
+                            "id": "willNotTransactOverseas",
+                            "label": "Confirm that you will not transact while overseas."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
