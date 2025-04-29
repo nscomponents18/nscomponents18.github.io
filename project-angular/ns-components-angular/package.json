@@ -1,0 +1,34 @@
+{
+  "name": "ns-components-angular",
+  "version": "0.1.6",
+  "description": "Angular Wrapper Components for NSComponents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nscomponents/nscomponentsangular.git"
+  },
+  "homepage": "https://nscomponent.com/",
+  "bugs": {
+    "url": "https://github.com/nscomponents/nscomponentsangular/issues"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "Angular",
+    "Component",
+    "Library",
+    "UI",
+    "Reusable",
+    "Customizable",
+    "NSComponents",
+    "Rollup",
+    "Typescript"
+  ],
+  "author": "NSComponents",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

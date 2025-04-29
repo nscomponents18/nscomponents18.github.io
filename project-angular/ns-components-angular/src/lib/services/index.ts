@@ -1,0 +1,1 @@
+export * from './ns-dynamic-component.service';

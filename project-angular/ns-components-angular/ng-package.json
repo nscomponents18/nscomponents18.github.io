@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ns-components-angular",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": [
+    {
+      "glob": "**/*.js",
+      "input": "src/generated/js",
+      "output": "generated/js"
+    },
+    {
+      "glob": "**/*.css",
+      "input": "src/generated/css",
+      "output": "generated/css"
+    }
+  ]
+}
